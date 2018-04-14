@@ -1,0 +1,116 @@
+@function px2rem($px){
+    $rem : 37.5px;
+    @return ($px / $rem) + rem
+}
+html{
+    background-color:#f8f8f8;
+}
+.header{
+    height: px2rem(80px);
+    background: red;
+    padding-left: px2rem(46px);
+    .header-item{
+        color: #ffcdce;
+        font-size: px2rem(32px);
+        float: left;
+        margin-right: px2rem(40px);
+        line-height: px2rem(80px);
+        // &相当于父元素 
+        &:nth-child(2){
+            color: #fff;
+            font-size: px2rem(34px);
+        }
+    }
+}
+
+.banner-content{
+    position: relative;
+    .banner{
+        width: 100%;
+        height: px2rem(380px);
+        display: block;
+    }
+    .banner-title{
+        position: absolute;
+        left: px2rem(15px);
+        bottom: px2rem(15px);
+        font-size: px2rem(32px);
+        color: #eee;
+    }
+}
+
+.news-content{
+    padding-bottom: px2rem(100px);
+    .news-item{
+        width: 100%;
+        box-sizing: border-box;
+        padding-left:px2rem(30px);
+        padding-right: px2rem(30px);
+        height: px2rem(180px);
+    }
+    .news-inner{
+        border-bottom: px2rem(1px) solid #e5e5e5;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .news-img{
+        margin-top: px2rem(20px);
+        margin-right: px2rem(30px);
+        display: block;
+        width: px2rem(190px);
+        height: px2rem(140px);
+        float: left;
+
+    }
+    .news-title{
+        font-size: px2rem(34px);
+        margin-top: px2rem(30px);
+        line-height: px2rem(40px);
+    }
+    .time{
+        position: absolute;
+        left: px2rem(221px);
+        bottom: px2rem(34px);
+        color: #000;
+        font-size: px2rem(24px)
+    }
+    .number{
+        position: absolute;
+        right: px2rem(8px);
+        bottom: px2rem(34px);
+        font-size: px2rem(24px);
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            background-image: url('./images/time.png');
+            height: px2rem(32px);
+            width: px2rem(32px);
+            background-size: contain;
+            top: px2rem(-4px);
+            left: px2rem(-40px);
+        }
+    }
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: px2rem(80px);
+    background: red;
+    .footer-nav{
+        display: flex;
+    }
+    .footer-navbtr{
+        flex: 1;
+        float: left;
+        width: 25%;
+        line-height: px2rem(80px);
+        text-align: center;
+        font-size: px2rem(30px);
+        color: #eee;
+        font-weight: 700;
+    }
+}
