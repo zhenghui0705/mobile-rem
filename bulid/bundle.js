@@ -83,12 +83,10 @@ let htmlDom = document.getElementsByTagName('html')[0]
 // 设置html字体大小
 htmlDom.style.fontSize = htmlWidth / 20 + 'px';
 
-window.addEventListener('resize', (e)=>{
+window.addEventListener('resize', (e) => {
     let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
     htmlDom.style.fontSize = htmlWidth / 20 + 'px';
 });
-
-
 
 /***/ }),
 /* 2 */
@@ -105,14 +103,14 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!./node_modules/_css-loader@0.28.11@css-loader/index.js!./node_modules/_sass-loader@6.0.7@sass-loader/lib/loader.js!./index.scss", function() {
-			var newContent = require("!!./node_modules/_css-loader@0.28.11@css-loader/index.js!./node_modules/_sass-loader@6.0.7@sass-loader/lib/loader.js!./index.scss");
+		module.hot.accept("!!./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./index.scss", function() {
+			var newContent = require("!!./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./index.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -125,41 +123,18 @@ if(false) {
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(4);
-exports = module.exports = __webpack_require__(5)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
 // module
-exports.push([module.i, "html {\n  background-color: #f8f8f8; }\n\n.header {\n  height: 2.13333rem;\n  background: red;\n  padding-left: 1.22667rem; }\n  .header .header-item {\n    color: #ffcdce;\n    font-size: 0.85333rem;\n    float: left;\n    margin-right: 1.06667rem;\n    line-height: 2.13333rem; }\n    .header .header-item:nth-child(2) {\n      color: #fff;\n      font-size: 0.90667rem; }\n\n.banner-content {\n  position: relative; }\n  .banner-content .banner {\n    width: 100%;\n    height: 10.13333rem;\n    display: block; }\n  .banner-content .banner-title {\n    position: absolute;\n    left: 0.4rem;\n    bottom: 0.4rem;\n    font-size: 0.85333rem;\n    color: #eee; }\n\n.news-content {\n  padding-bottom: 2.66667rem; }\n  .news-content .news-item {\n    width: 100%;\n    box-sizing: border-box;\n    padding-left: 0.8rem;\n    padding-right: 0.8rem;\n    height: 4.8rem; }\n  .news-content .news-inner {\n    border-bottom: 0.02667rem solid #e5e5e5;\n    height: 100%;\n    overflow: hidden;\n    position: relative; }\n  .news-content .news-img {\n    margin-top: 0.53333rem;\n    margin-right: 0.8rem;\n    display: block;\n    width: 5.06667rem;\n    height: 3.73333rem;\n    float: left; }\n  .news-content .news-title {\n    font-size: 0.90667rem;\n    margin-top: 0.8rem;\n    line-height: 1.06667rem; }\n  .news-content .time {\n    position: absolute;\n    left: 5.89333rem;\n    bottom: 0.90667rem;\n    color: #000;\n    font-size: 0.64rem; }\n  .news-content .number {\n    position: absolute;\n    right: 0.21333rem;\n    bottom: 0.90667rem;\n    font-size: 0.64rem; }\n    .news-content .number:before {\n      content: \"\";\n      display: block;\n      position: absolute;\n      background-image: url(" + escape(__webpack_require__(6)) + ");\n      height: 0.85333rem;\n      width: 0.85333rem;\n      background-size: contain;\n      top: -0.10667rem;\n      left: -1.06667rem; }\n\n.footer {\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n  height: 2.13333rem;\n  background: red; }\n  .footer .footer-nav {\n    display: flex; }\n  .footer .footer-navbtr {\n    flex: 1;\n    float: left;\n    width: 25%;\n    line-height: 2.13333rem;\n    text-align: center;\n    font-size: 0.8rem;\n    color: #eee;\n    font-weight: 700; }\n", ""]);
+exports.push([module.i, ".cleanfix::after, .cleanfix::before {\n  clear: both;\n  height: 0;\n  display: block;\n  overflow: hidden;\n  content: \"\"; }\n\n.topbar {\n  height: 2.34667rem;\n  border-bottom: 0.05333rem solid #e3e3e3; }\n  .topbar .topbar_back {\n    line-height: 2.34667rem;\n    margin: 0rem 0.85333rem 0rem 0.85333rem; }\n  .topbar .topbar_back img {\n    width: 0.45333rem;\n    height: 0.82667rem;\n    vertical-align: middle; }\n  .topbar .topbar_back a {\n    font-size: 1.06667rem;\n    float: right;\n    color: #000; }\n\n.newsContent {\n  margin: 0.66667rem 0.85333rem 0rem 0.85333rem; }\n  .newsContent .newTitle {\n    line-height: 1.92rem;\n    color: #333333;\n    font-size: 1.28rem; }\n\n.usesInfo {\n  width: 18.29333rem;\n  display: flex;\n  flex-direction: row;\n  margin-top: 1.68rem;\n  height: 2.13333rem;\n  position: relative; }\n  .usesInfo .useImg {\n    width: 2.13333rem;\n    height: 2.13333rem; }\n  .usesInfo .useTime {\n    margin-left: 0.8rem; }\n  .usesInfo .useTime h2 {\n    font-size: 0.85333rem;\n    color: #333333;\n    margin-top: 0.24rem; }\n  .usesInfo .useTime p {\n    font-size: 0.64rem;\n    color: #999999;\n    margin-top: 0.50667rem; }\n  .usesInfo .btn {\n    width: 2.93333rem;\n    height: 1.17333rem;\n    border: 0.05333rem solid #fead00;\n    border-radius: 0.21333rem;\n    position: absolute;\n    right: 0;\n    top: 0.10667rem; }\n  .usesInfo .btn a {\n    font-size: 0.74667rem;\n    color: #fead00;\n    text-align: center;\n    line-height: 1.17333rem;\n    display: inherit; }\n\n.newFore {\n  margin-top: 2.02667rem; }\n  .newFore .newText_1 {\n    line-height: 1.54667rem;\n    color: #555555;\n    font-size: 0.85333rem; }\n  .newFore .newsImgbox {\n    margin-top: 1.41333rem; }\n  .newFore .newsImgbox img {\n    width: 18.29333rem;\n    height: 9.33333rem; }\n  .newFore .ImgCallout {\n    color: #999999;\n    font-size: 0.64rem;\n    line-height: 1.92rem; }\n\n.newafter {\n  margin-top: 1.33333rem; }\n  .newafter .newText_2,\n  .newafter .newText_3,\n  .newafter .newText_4 {\n    line-height: 1.54667rem;\n    color: #555555;\n    font-size: 0.85333rem; }\n  .newafter .newsImgbox2,\n  .newafter .newText_3 {\n    margin-top: 1.33333rem; }\n  .newafter .newsImgbox2 img {\n    width: 18.29333rem;\n    height: 9.33333rem; }\n  .newafter .ImgCallout2 {\n    color: #999999;\n    font-size: 0.64rem;\n    line-height: 1.92rem; }\n\n.Foremodule {\n  margin-top: 1.41333rem;\n  margin-bottom: 1.33333rem; }\n  .Foremodule .Forelist {\n    overflow: hidden;\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap; }\n  .Foremodule .Forelist li {\n    color: #b0b0b0;\n    font-size: 0.58667rem;\n    height: 0.85333rem;\n    border: 0.05333rem solid #cccccc;\n    padding: 0 0.48rem;\n    border-radius: 0.42667rem;\n    line-height: 0.90667rem;\n    text-align: center;\n    margin-right: 0.53333rem;\n    margin-bottom: 0.26667rem; }\n\n.incomeSum {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-content: center; }\n\n.incomeSum img {\n  width: 0.64rem;\n  height: 0.69333rem; }\n\n.incomeTitle {\n  font-size: 0.74667rem;\n  color: #555555;\n  margin-left: 0.29333rem; }\n\n.money {\n  font-size: 0.74667rem;\n  color: #fead00; }\n\n.evaluateContent {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin-top: 1.6rem; }\n  .evaluateContent .evaluate1 {\n    margin-right: 3.46667rem; }\n    .evaluateContent .evaluate1 .like {\n      height: 3.2rem;\n      width: 3.2rem; }\n    .evaluateContent .evaluate1 .likeNum {\n      font-size: 0.74667rem;\n      color: #707070;\n      margin-top: 0.8rem; }\n  .evaluateContent .evaluate2 .like {\n    height: 3.2rem;\n    width: 3.2rem; }\n  .evaluateContent .evaluate2 .likeNum {\n    font-size: 0.74667rem;\n    color: #707070;\n    margin-top: 0.8rem; }\n\n.evaluateBtn {\n  width: 11.73333rem;\n  margin: 0 auto;\n  margin-top: 1.6rem;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.evaluateBtn a {\n  line-height: 1.86667rem;\n  width: 4.8rem;\n  text-align: center;\n  color: #707070;\n  font-size: 0.74667rem;\n  border: 0.05333rem solid #999999;\n  border-radius: 0.21333rem; }\n\n.comment {\n  margin-top: 1.6rem;\n  height: 2.34667rem;\n  border-bottom: 0.02667rem solid #ececec; }\n\n.commentTitle {\n  line-height: 2.34667rem;\n  height: 0.85333rem;\n  border-left: 0.10667rem solid #fead00;\n  margin-left: 0.85333rem; }\n\n.commentTitle a {\n  margin-left: 0.53333rem;\n  color: #333333;\n  font-size: 0.85333rem; }\n\n.commentBoder {\n  border-bottom: 0.02667rem solid #ececec;\n  padding-bottom: 1.33333rem; }\n\n.commentContent {\n  margin-top: 1.33333rem;\n  margin-bottom: 5.33333rem; }\n  .commentContent .review {\n    margin: 0 0.85333rem;\n    margin-top: 1.06667rem;\n    overflow: hidden; }\n  .commentContent .reviewImg {\n    float: left;\n    width: 1.6rem;\n    height: 1.6rem; }\n    .commentContent .reviewImg img {\n      width: 1.6rem;\n      height: 1.6rem;\n      border-radius: 50%; }\n  .commentContent .reviewTitle {\n    float: left;\n    margin-left: 0.50667rem; }\n    .commentContent .reviewTitle h2 {\n      color: #333333;\n      font-size: 0.69333rem; }\n    .commentContent .reviewTitle i {\n      color: #999999;\n      font-size: 0.58667rem; }\n  .commentContent .reviewLike {\n    float: right;\n    display: flex;\n    flex-direction: row;\n    align-items: center; }\n    .commentContent .reviewLike h2 {\n      font-size: 0.74667rem;\n      color: #707070; }\n    .commentContent .reviewLike img {\n      width: 1.06667rem;\n      height: 1.06667rem;\n      margin-left: 0.4rem;\n      margin-right: 1.14667rem; }\n  .commentContent .reviewLike2 {\n    float: right;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin-right: 0.85333rem; }\n    .commentContent .reviewLike2 h2 {\n      font-size: 0.74667rem;\n      color: #707070; }\n    .commentContent .reviewLike2 img {\n      width: 1.06667rem;\n      height: 1.06667rem;\n      margin-left: 0.4rem;\n      margin-right: 1.14667rem; }\n\n.Reply {\n  overflow: hidden; }\n\n.ReplyText {\n  float: right;\n  margin: 0.53333rem 1.33333rem 0rem 0rem;\n  color: #fead00;\n  font-size: 0.64rem; }\n\n.reviewInfo {\n  margin-left: 3.01333rem;\n  margin-top: 0.4rem; }\n  .reviewInfo p {\n    color: #555555;\n    font-size: 0.85333rem;\n    line-height: 1.33333rem;\n    margin-right: 1.33333rem;\n    text-align: left; }\n  .reviewInfo .useName {\n    color: #feae02; }\n\n.reviewTow {\n  overflow: hidden;\n  margin-left: 2.4rem;\n  margin-top: 1.70667rem; }\n  .reviewTow .reviewTitle2 {\n    float: left;\n    margin-left: 0.50667rem; }\n    .reviewTow .reviewTitle2 h2 {\n      color: #333333;\n      font-size: 0.69333rem; }\n    .reviewTow .reviewTitle2 i {\n      color: #999999;\n      font-size: 0.58667rem; }\n\n.commentBox {\n  height: 2.58667rem;\n  position: fixed;\n  bottom: 0;\n  background: #ffffff;\n  border: 1px solid #e0e0e0;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  align-content: center; }\n  .commentBox .reviewText {\n    width: 10.66667rem;\n    height: 1.49333rem;\n    background: #f5f5f5;\n    border-radius: 0.74667rem;\n    border: 0.02667rem solid #f5f5f5;\n    margin: 0.53333rem 0rem;\n    margin-left: 0.85333rem;\n    padding-left: 0.8rem;\n    padding-right: 0.8rem;\n    color: #b6b6b6; }\n  .commentBox .commentImg1 {\n    width: 1.06667rem;\n    line-height: 2.58667rem;\n    margin-left: 0.8rem; }\n    .commentBox .commentImg1 img {\n      width: 1.04rem;\n      height: 0.96rem;\n      vertical-align: middle; }\n  .commentBox .commentImg2 {\n    width: 1.06667rem;\n    line-height: 2.58667rem;\n    margin: 0 0.93333rem 0.53333rem;\n    position: relative; }\n    .commentBox .commentImg2 img {\n      width: 1.04rem;\n      height: 0.96rem;\n      vertical-align: middle; }\n  .commentBox .news {\n    position: absolute;\n    top: 0.53333rem;\n    right: 3.33333rem;\n    width: 0.8rem;\n    height: 0.8rem;\n    line-height: 0.8rem;\n    border-radius: 50%;\n    background: #fead00;\n    text-align: center;\n    color: #ffffff;\n    font-size: 0.48rem; }\n  .commentBox .commentImg3 {\n    width: 1.06667rem;\n    line-height: 2.58667rem; }\n    .commentBox .commentImg3 img {\n      width: 1.04rem;\n      height: 0.96rem;\n      vertical-align: middle; }\n\n.Review-article {\n  width: 100%;\n  height: 700px; }\n\n.likeViewContent, .NolikeViewContent {\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.5);\n  position: fixed;\n  top: 0;\n  z-index: 9999;\n  display: none; }\n\n.likeView {\n  width: 16rem;\n  height: 18.66667rem;\n  position: fixed;\n  right: 50%;\n  top: 50%;\n  margin-top: -9.33333rem;\n  margin-right: -8rem;\n  background: #ffffff;\n  border-radius: 0.42667rem; }\n  .likeView .likeViewTitle {\n    width: 14.4rem;\n    height: 1.06667rem;\n    margin: 0 auto;\n    margin-top: 0.8rem;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    position: relative; }\n    .likeView .likeViewTitle p {\n      color: #555555;\n      font-size: 0.64rem;\n      margin-left: 0.26667rem; }\n    .likeView .likeViewTitle .like {\n      width: 0.53333rem;\n      height: 0.53333rem; }\n    .likeView .likeViewTitle .offView {\n      width: 1.06667rem;\n      height: 1.06667rem;\n      position: absolute;\n      right: 0; }\n  .likeView .likeImg {\n    width: 4rem;\n    margin: 0 auto;\n    margin-top: 0.8rem; }\n    .likeView .likeImg img {\n      width: 4rem;\n      height: 4rem; }\n  .likeView .likeText {\n    margin-top: 1.33333rem; }\n    .likeView .likeText .textContent {\n      margin: 0rem 2.13333rem;\n      font-size: 0.74667rem;\n      color: #555555;\n      text-align: center; }\n    .likeView .likeText .textMark {\n      font-size: 1.33333rem;\n      color: #ffae00; }\n    .likeView .likeText .moreReward {\n      color: #ff3737;\n      font-size: 0.64rem;\n      text-align: center;\n      margin-top: 1.70667rem; }\n  .likeView .likeBtnContent {\n    margin: 0rem 0.85333rem;\n    margin-top: 1.65333rem;\n    border-top: 0.02667rem solid #ececec; }\n    .likeView .likeBtnContent .BtnContent {\n      margin: 0rem 1.01333rem;\n      display: flex;\n      flex-direction: row;\n      justify-content: space-between;\n      margin-top: 0.93333rem; }\n      .likeView .likeBtnContent .BtnContent .BtnNo {\n        border-radius: 0.77333rem;\n        width: 4.8rem;\n        height: 1.6rem;\n        border: 0.05333rem solid #cccccc;\n        text-align: center;\n        line-height: 1.6rem;\n        font-size: 0.74667rem; }\n      .likeView .likeBtnContent .BtnContent .BtnYes {\n        border-radius: 0.77333rem;\n        width: 4.8rem;\n        height: 1.6rem;\n        text-align: center;\n        line-height: 1.6rem;\n        background: #ffae00;\n        color: #eeeeee;\n        font-size: 0.74667rem;\n        box-shadow: 0px 0px 25px 4px #ff9c00; }\n  .likeView .listBar {\n    margin: 0rem 0.85333rem;\n    margin-top: 1.33333rem; }\n    .likeView .listBar ul {\n      display: flex;\n      flex-direction: row;\n      justify-content: space-around;\n      width: 100%;\n      margin: 0 auto; }\n    .likeView .listBar .listBar1 {\n      width: 6.53333rem;\n      height: 1.33333rem;\n      color: #ffffff;\n      font-size: 0.64rem;\n      background: #ffae00;\n      line-height: 1.33333rem;\n      text-align: center;\n      border-radius: 0.21333rem;\n      margin-bottom: 0.53333rem; }\n    .likeView .listBar .listBar2 {\n      width: 6.53333rem;\n      height: 1.33333rem;\n      color: #707070;\n      font-size: 0.64rem;\n      border: 1px solid #cccccc;\n      line-height: 1.33333rem;\n      text-align: center;\n      border-radius: 0.21333rem;\n      margin-bottom: 0.53333rem; }\n    .likeView .listBar ul li:nth-child(1) {\n      margin-right: 0.53333rem; }\n  .likeView .NolikeBtnContent2 {\n    margin-top: 0.53333rem;\n    border-top: 0.02667rem solid #ececec; }\n  .likeView .BtnContent2 {\n    margin: 0rem 1.01333rem;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    margin-top: 0.93333rem; }\n    .likeView .BtnContent2 .BtnNo2 {\n      border-radius: 0.77333rem;\n      width: 4.8rem;\n      height: 1.6rem;\n      border: 0.05333rem solid #cccccc;\n      text-align: center;\n      line-height: 1.6rem;\n      font-size: 0.74667rem; }\n    .likeView .BtnContent2 .BtnYes2 {\n      border-radius: 0.77333rem;\n      width: 4.8rem;\n      height: 1.6rem;\n      text-align: center;\n      line-height: 1.6rem;\n      background: #ffae00;\n      color: #eeeeee;\n      font-size: 0.74667rem;\n      box-shadow: 0px 0px 20px 2px #ff9c00; }\n\n.ReplyContent {\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.5);\n  position: fixed;\n  top: 0;\n  display: none; }\n  .ReplyContent .ReplyContentList {\n    width: 100%;\n    height: 9.14667rem;\n    position: fixed;\n    right: 50%;\n    bottom: 0;\n    margin-top: -9.33333rem;\n    margin-right: -50%;\n    background: #ffffff; }\n    .ReplyContent .ReplyContentList .Replybtn {\n      width: 100%;\n      height: 2.96rem;\n      border-bottom: 0.02667rem solid #ececec;\n      display: block;\n      line-height: 2.96rem;\n      text-align: center;\n      color: #555555;\n      font-size: 0.85333rem; }\n    .ReplyContent .ReplyContentList .Replybtn:nth-of-type(2) {\n      border-bottom: 0.42667rem solid #ececec; }\n\n.ReportView {\n  width: 16rem;\n  height: 18.66667rem;\n  position: fixed;\n  right: 50%;\n  top: 50%;\n  margin-top: -9.33333rem;\n  margin-right: -8rem;\n  background: #ffffff;\n  border-radius: 0.42667rem;\n  display: none; }\n  .ReportView .ReportViewImg {\n    width: 1.06667rem;\n    height: 1.06667rem;\n    position: absolute;\n    right: 0.8rem;\n    top: 0.8rem; }\n", ""]);
 
 // exports
 
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports) {
-
-module.exports = function escape(url) {
-    if (typeof url !== 'string') {
-        return url
-    }
-    // If url is already wrapped in quotes, remove them
-    if (/^['"].*['"]$/.test(url)) {
-        url = url.slice(1, -1);
-    }
-    // Should url be wrapped?
-    // See https://drafts.csswg.org/css-values-3/#urls
-    if (/["'() \t\n]/.test(url)) {
-        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
-    }
-
-    return url
-}
-
-
-/***/ }),
-/* 5 */
 /***/ (function(module, exports) {
 
 /*
@@ -241,13 +216,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACYklEQVRYR8WXjTEEQRBGv4sAESACRIAIEAEiQASIABEgAkSACBABIkAE1Nua3pqb3Znt2St1U7V1VbfT3W/6d3aiOa/JjPYXg/z3WD01ABjblLQbHjNutoG4l/Qk6UGSC8oLcCbpSJIZfZb0Ghnh//UACBDGLyVdDYEMAaD0TtKKJIyilBOWToeHjgPMh6S9ANsbpRLAgaQLSexB4U1lnAFBZkHSYU4+B4Dxa0lvId6cpG/hGbyR8wjvyYu1HEQfAG5/lPQpaWvA3ZZ4AOcW+UHYliVtp+HoA+C0CGGcRCut35Ab7C0tPIGuL0mr8cYUwFyfjVlixQuAWK/uFMBiDbFn1QCgD/3ItF6IAYj9i6STUG7/AUA1UVkbFt4YgBqn2UCXy/oUqtYDePY9NChgmhq3RaZaR/Ocnj21AMhYB20SNwXgv6GMjuHGAHBQmhNhmAIYo2yMDN1x32zHHqCp4J5aDyCH0ltH3+DQeICp2tieNQRMSeqbLmdlRustwQDQhjoGQBCyJW8GRvsoYUAYQDEMcU7nBBXG00nCTo2OAEHEYOw3LulOr4k90KnRkQAlsU6vSVsx8WF00oxcV6oKSHoMTYgR3yZ6CsALRjFJVBqxFXbbrVZ+jGRLxKkqsJ220TsRPTA2CTsH67sPFC8QHmvJnuIFJ3clswtE8T7ngLGT/4Tq6Ay50qXUPEFSEpbziinJAU5DHhXvlUPXciDsm4ADA5L78GDvTshwS2C+C5DPVtQQgHmZE6GIIRKvqbYavSDZ2D94r/ACxEZptyQWT/xtyCDjoaW71xgAt3LPxrkD/AEWDpkhkNPtQgAAAABJRU5ErkJggg=="
-
-/***/ }),
-/* 7 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -303,7 +272,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(8);
+var	fixUrls = __webpack_require__(6);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -619,7 +588,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 8 */
+/* 6 */
 /***/ (function(module, exports) {
 
 

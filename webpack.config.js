@@ -16,6 +16,6 @@ module.exports = {
              {test:/\.css$/, loaders:"style-loader!css-loader"},
              {test:/\.scss$/, loader:"style-loader!css-loader!sass-loader"},
              {test: /\.(jpg|png|gif|svg)$/, use: ['url-loader?limit=8192&name=./[name].[ext]']},/*解析图片*/
-         ]
+         ],
      }
 }

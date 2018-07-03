@@ -1,116 +1,664 @@
-@function px2rem($px){
-    $rem : 37.5px;
-    @return ($px / $rem) + rem
+@function px2rem($px) {
+    $rem: 37.5px;
+    @return ($px / $rem)+rem
 }
-html{
-    background-color:#f8f8f8;
+.cleanfix::after , .cleanfix::before{
+    clear: both;
+    height: 0;
+    display: block;
+    overflow: hidden;
+    content: "";
 }
-.header{
-    height: px2rem(80px);
-    background: red;
-    padding-left: px2rem(46px);
-    .header-item{
-        color: #ffcdce;
-        font-size: px2rem(32px);
-        float: left;
-        margin-right: px2rem(40px);
-        line-height: px2rem(80px);
-        // &相当于父元素 
-        &:nth-child(2){
-            color: #fff;
-            font-size: px2rem(34px);
-        }
+.topbar {
+    height: px2rem(88px);
+    border-bottom: px2rem(2px) solid#e3e3e3;
+    .topbar_back {
+        line-height: px2rem(88px);
+        margin: px2rem(0px) px2rem(32px) px2rem(0px) px2rem(32px);
     }
-}
-
-.banner-content{
-    position: relative;
-    .banner{
-        width: 100%;
-        height: px2rem(380px);
-        display: block;
+    .topbar_back img {
+        width: px2rem(17px);
+        height: px2rem(31px);
+        vertical-align: middle;
     }
-    .banner-title{
-        position: absolute;
-        left: px2rem(15px);
-        bottom: px2rem(15px);
-        font-size: px2rem(32px);
-        color: #eee;
-    }
-}
-
-.news-content{
-    padding-bottom: px2rem(100px);
-    .news-item{
-        width: 100%;
-        box-sizing: border-box;
-        padding-left:px2rem(30px);
-        padding-right: px2rem(30px);
-        height: px2rem(180px);
-    }
-    .news-inner{
-        border-bottom: px2rem(1px) solid #e5e5e5;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-    }
-    .news-img{
-        margin-top: px2rem(20px);
-        margin-right: px2rem(30px);
-        display: block;
-        width: px2rem(190px);
-        height: px2rem(140px);
-        float: left;
-
-    }
-    .news-title{
-        font-size: px2rem(34px);
-        margin-top: px2rem(30px);
-        line-height: px2rem(40px);
-    }
-    .time{
-        position: absolute;
-        left: px2rem(221px);
-        bottom: px2rem(34px);
+    .topbar_back a {
+        font-size: px2rem(40px);
+        float: right;
         color: #000;
-        font-size: px2rem(24px)
     }
-    .number{
-        position: absolute;
-        right: px2rem(8px);
-        bottom: px2rem(34px);
+}
+
+.newsContent {
+    margin: px2rem(25px) px2rem(32px) px2rem(0px) px2rem(32px);
+    .newTitle {
+        line-height: px2rem(72px);
+        color: #333333;
+        font-size: px2rem(48px);
+    }
+}
+
+.usesInfo {
+    width: px2rem(686px);
+    display: flex;
+    flex-direction: row;
+    margin-top: px2rem(63px);
+    height: px2rem(80px);
+    position: relative;
+    .useImg {
+        width: px2rem(80px);
+        height: px2rem(80px);
+    }
+    ;
+    .useTime {
+        margin-left: px2rem(30px);
+    }
+    ;
+    .useTime h2 {
+        font-size: px2rem(32px);
+        color: #333333;
+        margin-top: px2rem(9px);
+    }
+    ;
+    .useTime p {
         font-size: px2rem(24px);
-        &:before{
-            content: "";
-            display: block;
-            position: absolute;
-            background-image: url('./images/time.png');
-            height: px2rem(32px);
-            width: px2rem(32px);
-            background-size: contain;
-            top: px2rem(-4px);
-            left: px2rem(-40px);
+        color: #999999;
+        margin-top: px2rem(19px);
+    }
+    ;
+    .btn {
+        width: px2rem(110px);
+        height: px2rem(44px);
+        border: px2rem(2px) solid #fead00;
+        border-radius: px2rem(8px);
+        position: absolute;
+        right: 0;
+        top: px2rem(4px);
+    }
+    .btn a {
+        font-size: px2rem(28px);
+        color: #fead00;
+        text-align: center;
+        line-height: px2rem(44px);
+        display: inherit;
+    }
+}
+
+.newFore {
+    margin-top: px2rem(76px);
+    .newText_1 {
+        line-height: px2rem(58px);
+        color: #555555;
+        font-size: px2rem(32px);
+    }
+    ;
+    .newsImgbox {
+        margin-top: px2rem(53px);
+    }
+    ;
+    .newsImgbox img {
+        width: px2rem(686px);
+        height: px2rem(350px);
+    }
+    ;
+    .ImgCallout {
+        color: #999999;
+        font-size: px2rem(24px);
+        line-height: px2rem(72px);
+    }
+}
+
+.newafter {
+    margin-top: px2rem(50px);
+    .newText_2,
+    .newText_3,
+    .newText_4 {
+        line-height: px2rem(58px);
+        color: #555555;
+        font-size: px2rem(32px);
+    }
+    ;
+    .newsImgbox2,
+    .newText_3 {
+        margin-top: px2rem(50px);
+    }
+    ;
+    .newsImgbox2 img {
+        width: px2rem(686px);
+        height: px2rem(350px);
+    }
+    ;
+    .ImgCallout2 {
+        color: #999999;
+        font-size: px2rem(24px);
+        line-height: px2rem(72px);
+    }
+}
+
+.Foremodule {
+    margin-top: px2rem(53px);
+    margin-bottom: px2rem(50px);
+    .Forelist {
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .Forelist li {
+        color: #b0b0b0;
+        font-size: px2rem(22px);
+        height: px2rem(32px);
+        border: px2rem(2px) solid #cccccc;
+        padding: 0 px2rem(18px);
+        border-radius: px2rem(16px);
+        line-height: px2rem(34px);
+        text-align: center;
+        margin-right: px2rem(20px);
+        margin-bottom: px2rem(10px);
+    }
+}
+
+.incomeSum {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.incomeSum img {
+    width: px2rem(24px);
+    height: px2rem(26px);
+}
+
+.incomeTitle {
+    font-size: px2rem(28px);
+    color: #555555;
+    margin-left: px2rem(11px);
+}
+
+.money {
+    font-size: px2rem(28px);
+    color: #fead00;
+}
+
+.evaluateContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: px2rem(60px);
+    .evaluate1 {
+        margin-right: px2rem(130px);
+        .like {
+            height: px2rem(120px);
+            width: px2rem(120px);
+        }
+        .likeNum {
+            font-size: px2rem(28px);
+            color: #707070;
+            margin-top: px2rem(30px);
+        }
+    }
+    .evaluate2 {
+        .like {
+            height: px2rem(120px);
+            width: px2rem(120px);
+        }
+        .likeNum {
+            font-size: px2rem(28px);
+            color: #707070;
+            margin-top: px2rem(30px);
         }
     }
 }
 
-.footer{
+.evaluateBtn {
+    width: px2rem(440px);
+    margin: 0 auto;
+    margin-top: px2rem(60px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.evaluateBtn a {
+    line-height: px2rem(70px);
+    width: px2rem(180px);
+    text-align: center;
+    color: #707070;
+    font-size: px2rem(28px);
+    border: px2rem(2px) solid #999999;
+    border-radius: px2rem(8px);
+}
+
+.comment {
+    margin-top: px2rem(60px);
+    height: px2rem(88px);
+    border-bottom: px2rem(1px) solid #ececec;
+}
+
+.commentTitle {
+    line-height: px2rem(88px);
+    height: px2rem(32px);
+    border-left: px2rem(4px) solid #fead00;
+    margin-left: px2rem(32px);
+}
+
+.commentTitle a {
+    margin-left: px2rem(20px);
+    color: #333333;
+    font-size: px2rem(32px);
+}
+
+// 评论内容
+.commentBoder {
+    border-bottom: px2rem(1px) solid #ececec;
+    padding-bottom: px2rem(50px);
+}
+
+.commentContent {
+    margin-top: px2rem(50px);
+    margin-bottom: px2rem(200px);
+    .review {
+        margin: 0 px2rem(32px);
+        margin-top: px2rem(40px);
+        overflow: hidden;
+    }
+    .reviewImg {
+        float: left;
+        width: px2rem(60px);
+        height: px2rem(60px);
+        img {
+            width: px2rem(60px);
+            height: px2rem(60px);
+            border-radius: 50%;
+        }
+    }
+    .reviewTitle {
+        float: left;
+        margin-left: px2rem(19px);
+        h2 {
+            color: #333333;
+            font-size: px2rem(26px);
+        }
+        i {
+            color: #999999;
+            font-size: px2rem(22px);
+        }
+    }
+    .reviewLike {
+        float: right;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        h2 {
+            font-size: px2rem(28px);
+            color: #707070;
+        }
+        img {
+            width: px2rem(40px);
+            height: px2rem(40px);
+            margin-left: px2rem(15px);
+            margin-right: px2rem(43px);
+        }
+    }
+    .reviewLike2 {
+        float: right;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: px2rem(32px);
+        h2 {
+            font-size: px2rem(28px);
+            color: #707070;
+        }
+        img {
+            width: px2rem(40px);
+            height: px2rem(40px);
+            margin-left: px2rem(15px);
+            margin-right: px2rem(43px);
+        }
+    }
+}
+
+.Reply {
+   overflow: hidden;
+}
+.ReplyText {
+    float: right;
+    margin: px2rem(20px) px2rem(50px) px2rem(0px) px2rem(0px);
+    color: #fead00;
+    font-size: px2rem(24px);
+}
+.reviewInfo {
+    margin-left: px2rem(113px);
+    margin-top: px2rem(15px);
+    p {
+        color: #555555;
+        font-size: px2rem(32px);
+        line-height: px2rem(50px);
+        margin-right: px2rem(50px);
+        text-align: left;
+    } // 回复评论id
+    .useName {
+        color: #feae02;
+    }
+}
+
+.reviewTow {
+    overflow: hidden;
+    margin-left: px2rem(90px);
+    margin-top: px2rem(64px);
+    .reviewTitle2 {
+        float: left;
+        margin-left: px2rem(19px);
+        h2 {
+            color: #333333;
+            font-size: px2rem(26px);
+        }
+        i {
+            color: #999999;
+            font-size: px2rem(22px);
+        }
+    }
+}
+
+// 评论框
+.commentBox {
+    height: px2rem(97px);
     position: fixed;
     bottom: 0;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
     width: 100%;
-    height: px2rem(80px);
-    background: red;
-    .footer-nav{
-        display: flex;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    .reviewText {
+        width: px2rem(400px);
+        height: px2rem(56px);
+        background: #f5f5f5;
+        border-radius: px2rem(28px);
+        border: px2rem(1px) solid #f5f5f5;
+        margin: px2rem(20px) px2rem(0px);
+        margin-left: px2rem(32px);
+        padding-left: px2rem(30px);
+        padding-right: px2rem(30px);
+        color: #b6b6b6;
     }
-    .footer-navbtr{
-        flex: 1;
-        float: left;
-        width: 25%;
-        line-height: px2rem(80px);
+    .commentImg1 {
+        width: px2rem(40px);
+        line-height: px2rem(97px);
+        margin-left: px2rem(30px);
+        img {
+            width: px2rem(39px);
+            height: px2rem(36px);
+            vertical-align: middle;
+        }
+    }
+    .commentImg2 {
+        width: px2rem(40px);
+        line-height: px2rem(97px);
+        margin: 0 px2rem(35px) px2rem(20px);
+        position: relative;
+        img {
+            width: px2rem(39px);
+            height: px2rem(36px);
+            vertical-align: middle;
+        }
+    }
+    .news {
+        position: absolute;
+        top: px2rem(20px);
+        right: px2rem(125px);
+        width: px2rem(30px);
+        height: px2rem(30px);
+        line-height: px2rem(30px);
+        border-radius: 50%;
+        background: #fead00;
         text-align: center;
-        font-size: px2rem(30px);
-        color: #eee;
-        font-weight: 700;
+        color: #ffffff;
+        font-size: px2rem(18px);
+    }
+    .commentImg3 {
+        width: px2rem(40px);
+        line-height: px2rem(97px);
+        img {
+            width: px2rem(39px);
+            height: px2rem(36px);
+            vertical-align: middle;
+        }
+    }
+}
+
+.Review-article {
+    width: 100%;
+    height: 700px;
+}
+
+// 点赞弹窗
+.likeViewContent , .NolikeViewContent{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+
+.likeView {
+    width: px2rem(600px);
+    height: px2rem(700px);
+    position: fixed;
+    right: 50%;
+    top: 50%;
+    margin-top: px2rem(-350px);
+    margin-right: px2rem(-300px);
+    background: #ffffff;
+    border-radius: px2rem(16px);
+    .likeViewTitle {
+        width: px2rem(540px);
+        height: px2rem(40px);
+        margin: 0 auto;
+        margin-top: px2rem(30px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        p {
+            color: #555555;
+            font-size: px2rem(24px);
+            margin-left: px2rem(10px);
+        }
+        .like {
+            width: px2rem(20px);
+            height: px2rem(20px);
+        }
+        .offView {
+            width: px2rem(40px);
+            height: px2rem(40px);
+            position: absolute;
+            right: 0;
+        }
+    }
+    .likeImg {
+        width: px2rem(150px);
+        margin: 0 auto;
+        margin-top: px2rem(30px);
+        img {
+            width: px2rem(150px);
+            height: px2rem(150px);
+        }
+    }
+    
+    .likeText {
+        margin-top: px2rem(50px);
+        .textContent {
+            margin: px2rem(0px) px2rem(80px);
+            font-size: px2rem(28px);
+            color: #555555;
+            text-align: center;
+        }
+        .textMark {
+            font-size: px2rem(50px);
+            color: #ffae00;
+        }
+        .moreReward {
+            color: #ff3737;
+            font-size: px2rem(24px);
+            text-align: center;
+            margin-top: px2rem(64px);
+        }
+    }
+    .likeBtnContent {
+        margin: px2rem(0px) px2rem(32px);
+        margin-top: px2rem(62px);
+        border-top: px2rem(1px) solid #ececec;
+        .BtnContent {
+            margin: px2rem(0px) px2rem(38px);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: px2rem(35px);
+            .BtnNo {
+                border-radius: px2rem(29px);
+                width: px2rem(180px);
+                height: px2rem(60px);
+                border: px2rem(2px) solid #cccccc;
+                text-align: center;
+                line-height: px2rem(60px);
+                font-size: px2rem(28px)
+            }
+            .BtnYes {
+                border-radius: px2rem(29px);
+                width: px2rem(180px);
+                height: px2rem(60px);
+                text-align: center;
+                line-height: px2rem(60px);
+                background: #ffae00;
+                color: #eeeeee;
+                font-size: px2rem(28px);
+                box-shadow: 0px 0px 25px 4px #ff9c00
+            }
+        }
+    }
+    .listBar{
+        margin: px2rem(0px) px2rem(32px);
+        margin-top: px2rem(50px);
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .listBar1{
+            width: px2rem(245px);
+            height: px2rem(50px);
+            color: #ffffff;
+            font-size: px2rem(24px);
+            background: #ffae00;
+            line-height: px2rem(50px);
+            text-align: center;
+            border-radius: px2rem(8px);
+            margin-bottom: px2rem(20px);
+        }
+        .listBar2{
+            width: px2rem(245px);
+            height: px2rem(50px);
+            color: #707070;
+            font-size: px2rem(24px);
+            border: 1px solid #cccccc;
+            line-height: px2rem(50px);
+            text-align: center;
+            border-radius: px2rem(8px);
+            margin-bottom: px2rem(20px);
+        }
+        ul li:nth-child(1){
+            margin-right: px2rem(20px)
+        }
+    }
+    .NolikeBtnContent2{
+
+        margin-top: px2rem(20px);
+        border-top: px2rem(1px) solid #ececec;
+    }
+    .BtnContent2 {
+        margin: px2rem(0px) px2rem(38px);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: px2rem(35px);
+        .BtnNo2 {
+            border-radius: px2rem(29px);
+            width: px2rem(180px);
+            height: px2rem(60px);
+            border: px2rem(2px) solid #cccccc;
+            text-align: center;
+            line-height: px2rem(60px);
+            font-size: px2rem(28px)
+        }
+        .BtnYes2 {
+            border-radius: px2rem(29px);
+            width: px2rem(180px);
+            height: px2rem(60px);
+            text-align: center;
+            line-height: px2rem(60px);
+            background: #ffae00;
+            color: #eeeeee;
+            font-size: px2rem(28px);
+            box-shadow: 0px 0px 20px 2px #ff9c00
+        }
+    }
+}
+
+// 回复按钮
+.ReplyContent{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    display: none;
+    .ReplyContentList{
+        width: 100%;
+        height: px2rem(343px);
+        position: fixed;
+        right: 50%;
+        bottom: 0;
+        margin-top: px2rem(-350px);
+        margin-right: -50%;
+        background: #ffffff;
+        .Replybtn{
+            width: 100%;
+            height: px2rem(111px);
+            border-bottom: px2rem(1px) solid #ececec;
+            display: block;
+            line-height: px2rem(111px);
+            text-align: center;
+            color: #555555;
+            font-size: px2rem(32px);
+        }
+        .Replybtn:nth-of-type(2){
+            border-bottom: px2rem(16px) solid #ececec;
+        }
+    }
+}
+.ReportView{
+    width: px2rem(600px);
+    height: px2rem(700px);
+    position: fixed;
+    right: 50%;
+    top: 50%;
+    margin-top: px2rem(-350px);
+    margin-right: px2rem(-300px);
+    background: #ffffff;
+    border-radius: px2rem(16px);
+    display: none;
+    .ReportViewImg{
+        width: px2rem(40px);
+        height: px2rem(40px);
+        position: absolute;
+        right: px2rem(30px);
+        top: px2rem(30px);
     }
 }
