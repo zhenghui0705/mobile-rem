@@ -101,11 +101,11 @@
                         <img src="./images/usephoto.png" alt="">
                     </div>
                     <div class="reviewTitle">
-                        <p>张三说币<p/>
+                        <p>张三说币</p>
                         <i>8小时前</i>
                     </div>
                     <div class="reviewLike">
-                        <h2>12</h2>
+                        <p>12</p>
                         <img src="./images/favor.png" alt="">
                         <i id="moreBtn">···</i>
                     </div>
@@ -126,21 +126,20 @@
                         <i>8小时前</i>
                     </div>
                     <div class="reviewLike">
-                        <h2>12</h2>
+                        <p>12</p>
                         <img src="./images/favor.png" alt="">
-                        <i>···</i>
+                        <i id="moreBtn">···</i>
                     </div>
                 </div>
                 <div class="reviewInfo">
                     <p>
                         评论内容评论内容评论内容，评论内容评论内容评论内容评论内容。 评论内容评论内容评论内容，评论内容评论内容评论内容评论内容
-
                     </p>
                 </div>
                 <div class="reviewTow">
-                        <div class="reviewImg">
-                                <img src="./images/usephoto.png" alt="">
-                            </div>
+                    <div class="reviewImg">
+                        <img src="./images/usephoto.png" alt="">
+                    </div>
                     <div class="reviewTitle2">
                         <p>萧十一郎</p>
                         <i>8小时前</i>
@@ -149,7 +148,7 @@
                 <div class="reviewInfo">
                     <p>
                         回复:
-                        <!-- <i class="useName">小明小明:</i> -->
+                        <i class="useName">小明小明:</i>
                         评论内容评论内容评论内容，评论内容评论内容评论内容评论内容。
                     </p>
                 </div>
@@ -217,16 +216,16 @@
                 </div>
                 <div class="listBar">
                     <ul>
-                        <li class="listBar1">与原创标签不符</li>
-                        <li class="listBar2">标题夸张</li>
+                        <li class="listBar2 active" value=1>与原创标签不符</li>
+                        <li class="listBar2" value="2">标题夸张</li>
                     </ul>
                     <ul>
-                        <li class="listBar2">涉及违法</li>
-                        <li class="listBar2">广告软文</li>
+                        <li class="listBar2" value="3">涉及违法</li>
+                        <li class="listBar2" value="4">广告软文</li>
                     </ul>
                     <ul>
-                        <li class="listBar2">侵权（抄袭、侵犯…)</li>
-                        <li class="listBar2">内容不实</li>
+                        <li class="listBar2" value="5">侵权（抄袭、侵犯…)</li>
+                        <li class="listBar2" value="6">内容不实</li>
                     </ul>
                 </div>
                 <div class="NolikeBtnContent2">
@@ -248,37 +247,24 @@
         <div class="ReportView">
             <img src="./images/off.png" alt="" class="ReportViewImg">
         </div>
-        <script src="./bulid/bundle.js"></script>
-        <script src="http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
-        <script>
-            $(function () {
-                 // 评价弹窗
-                $('#likeBtn1').click(function () {
-                    $('.likeViewContent').show()
-                })
-                $('.offView ,.BtnYes').click(function () {
-                    $('.likeViewContent').hide()
-                })
-               
-                $('#likeBtn2').click(function () {
-                    $('.NolikeViewContent').show()
-                })
-                $('.offView ,.BtnYes').click(function () {
-                    $('.NolikeViewContent').hide()
-                })
-                // moreBtn
-                $('#moreBtn').click(function(){
-                    $('.ReplyContent').show()
-                })
-                $('#cancel').click(function () {
-                    $('.ReplyContent').hide()
-                })
-                // 举报
-                $("#makeknown").click(function(){
-                   
-                })
-            })
-        </script>
+
+        <div>
+            <!-- 遮罩 -->
+            <div class="modal"></div>
+            <!-- 回复框 -->
+            <div class="ReplyboxContent">
+                <div class="Replybox">
+                    <input type="text" value="说点什么..." class="ReplyTest"></input>
+                    <div class="release">
+                        <i>发布</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./bulid/bundle.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./js//view.js"></script>
 </body>
 
 </html>

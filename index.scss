@@ -1,14 +1,19 @@
 @function px2rem($px) {
     $rem: 37.5px;
-    @return ($px / $rem)+rem
+    @return ($px / $rem)+rem;
+    $viewH : 98px;
 }
-.cleanfix::after , .cleanfix::before{
+
+
+.cleanfix::after,
+.cleanfix::before {
     clear: both;
     height: 0;
     display: block;
     overflow: hidden;
     content: "";
 }
+
 .topbar {
     height: px2rem(88px);
     border-bottom: px2rem(2px) solid#e3e3e3;
@@ -66,7 +71,7 @@
     }
     ;
     .btn {
-        width: px2rem(110px);
+        padding: px2rem(0px) px2rem(8px);
         height: px2rem(44px);
         border: px2rem(2px) solid #fead00;
         border-radius: px2rem(8px);
@@ -184,9 +189,11 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: px2rem(60px);
+    margin: px2rem(60px) px2rem(190px) px2rem(0px) px2rem(190px);
     .evaluate1 {
-        margin-right: px2rem(130px);
+        width: px2rem(100px);
+        flex: 1;
+        text-align: center;
         .like {
             height: px2rem(120px);
             width: px2rem(120px);
@@ -198,6 +205,9 @@
         }
     }
     .evaluate2 {
+        width: px2rem(100px);
+        text-align: center;
+        flex: 1;
         .like {
             height: px2rem(120px);
             width: px2rem(120px);
@@ -256,7 +266,7 @@
 
 .commentContent {
     margin-top: px2rem(50px);
-    margin-bottom: px2rem(200px);
+    margin-bottom: px2rem(100px);
     .review {
         margin: 0 px2rem(32px);
         margin-top: px2rem(40px);
@@ -275,6 +285,10 @@
     .reviewTitle {
         float: left;
         margin-left: px2rem(19px);
+        p {
+            font-size: px2rem(32px);
+            height: px2rem(32px);
+        }
         h2 {
             color: #333333;
             font-size: px2rem(26px);
@@ -282,6 +296,7 @@
         i {
             color: #999999;
             font-size: px2rem(22px);
+            height: px2rem(22px);
         }
     }
     .reviewLike {
@@ -289,9 +304,10 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        h2 {
+        p {
             font-size: px2rem(28px);
             color: #707070;
+            height: px2rem(28px);
         }
         img {
             width: px2rem(40px);
@@ -320,14 +336,16 @@
 }
 
 .Reply {
-   overflow: hidden;
+    overflow: hidden;
 }
+
 .ReplyText {
     float: right;
     margin: px2rem(20px) px2rem(50px) px2rem(0px) px2rem(0px);
     color: #fead00;
     font-size: px2rem(24px);
 }
+
 .reviewInfo {
     margin-left: px2rem(113px);
     margin-top: px2rem(15px);
@@ -340,6 +358,8 @@
     } // 回复评论id
     .useName {
         color: #feae02;
+        font-size: px2rem(32px);
+        height: px2rem(32px);
     }
 }
 
@@ -350,6 +370,10 @@
     .reviewTitle2 {
         float: left;
         margin-left: px2rem(19px);
+        p {
+            font-size: px2rem(32px);
+            height: px2rem(32px);
+        }
         h2 {
             color: #333333;
             font-size: px2rem(26px);
@@ -383,6 +407,7 @@
         padding-left: px2rem(30px);
         padding-right: px2rem(30px);
         color: #b6b6b6;
+        font-size: px2rem(24px)
     }
     .commentImg1 {
         width: px2rem(40px);
@@ -435,7 +460,8 @@
 }
 
 // 点赞弹窗
-.likeViewContent , .NolikeViewContent{
+.likeViewContent,
+.NolikeViewContent {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -489,7 +515,6 @@
             height: px2rem(150px);
         }
     }
-    
     .likeText {
         margin-top: px2rem(50px);
         .textContent {
@@ -541,20 +566,20 @@
             }
         }
     }
-    .listBar{
+    .listBar {
         margin: px2rem(0px) px2rem(32px);
         margin-top: px2rem(50px);
-        ul{
+        ul {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             width: 100%;
             margin: 0 auto;
         }
-        .listBar1{
+        .active {
             width: px2rem(245px);
             height: px2rem(50px);
-            color: #ffffff;
+            color: #ffffff !important;
             font-size: px2rem(24px);
             background: #ffae00;
             line-height: px2rem(50px);
@@ -562,7 +587,7 @@
             border-radius: px2rem(8px);
             margin-bottom: px2rem(20px);
         }
-        .listBar2{
+        .listBar2 {
             width: px2rem(245px);
             height: px2rem(50px);
             color: #707070;
@@ -573,12 +598,11 @@
             border-radius: px2rem(8px);
             margin-bottom: px2rem(20px);
         }
-        ul li:nth-child(1){
+        ul li:nth-child(1) {
             margin-right: px2rem(20px)
         }
     }
-    .NolikeBtnContent2{
-
+    .NolikeBtnContent2 {
         margin-top: px2rem(20px);
         border-top: px2rem(1px) solid #ececec;
     }
@@ -612,14 +636,14 @@
 }
 
 // 回复按钮
-.ReplyContent{
+.ReplyContent {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     display: none;
-    .ReplyContentList{
+    .ReplyContentList {
         width: 100%;
         height: px2rem(343px);
         position: fixed;
@@ -628,7 +652,7 @@
         margin-top: px2rem(-350px);
         margin-right: -50%;
         background: #ffffff;
-        .Replybtn{
+        .Replybtn {
             width: 100%;
             height: px2rem(111px);
             border-bottom: px2rem(1px) solid #ececec;
@@ -638,12 +662,13 @@
             color: #555555;
             font-size: px2rem(32px);
         }
-        .Replybtn:nth-of-type(2){
+        .Replybtn:nth-of-type(2) {
             border-bottom: px2rem(16px) solid #ececec;
         }
     }
 }
-.ReportView{
+
+.ReportView {
     width: px2rem(600px);
     height: px2rem(700px);
     position: fixed;
@@ -654,11 +679,73 @@
     background: #ffffff;
     border-radius: px2rem(16px);
     display: none;
-    .ReportViewImg{
+    .ReportViewImg {
         width: px2rem(40px);
         height: px2rem(40px);
-        position: absolute;
         right: px2rem(30px);
         top: px2rem(30px);
     }
+}
+
+//底部导航栏隐藏时的属性 
+.navbarhide {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+//回复框
+.ReplyboxContent{
+    display: none;
+}
+.Replybox {
+    height: px2rem(97px);
+    position: fixed;
+    bottom: px2rem(0px);
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .ReplyTest {
+        width: px2rem(400px);
+        height: px2rem(56px);
+        background: #f5f5f5;
+        border-radius: px2rem(28px);
+        border: px2rem(1px) solid #f5f5f5;
+        margin: px2rem(20px) px2rem(0px);
+        margin-left: px2rem(32px);
+        padding-left: px2rem(30px);
+        padding-right: px2rem(30px);
+        color: #b6b6b6;
+        font-size: px2rem(24px);
+    }
+    .release {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: px2rem(180px);
+        line-height: px2rem(98px);
+        flex: 1;
+        i {
+            background: #ffae00;
+            width: px2rem(180px);
+            height: px2rem(60px);
+            line-height: px2rem(60px);
+            text-align: center;
+            color: #fff;
+            font-size: px2rem(28px);
+            margin-left: px2rem(32px);
+            border-radius: px2rem(27px);
+        }
+    }
+}
+//遮罩层
+.modal{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    bottom: px2rem(98px);
+    display: none;
 }
