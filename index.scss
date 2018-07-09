@@ -355,6 +355,7 @@
         line-height: px2rem(50px);
         margin-right: px2rem(50px);
         text-align: left;
+        word-wrap: break-word;
     } // 回复评论id
     .useName {
         color: #feae02;
@@ -706,6 +707,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+
     .ReplyTest {
         width: px2rem(400px);
         height: px2rem(56px);
