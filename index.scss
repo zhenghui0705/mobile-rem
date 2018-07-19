@@ -189,7 +189,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: px2rem(60px) px2rem(190px) px2rem(0px) px2rem(190px);
+    margin: px2rem(60px) px2rem(150px) px2rem(0px) px2rem(150px);
     .evaluate1 {
         width: px2rem(100px);
         flex: 1;
@@ -563,7 +563,6 @@
                 background: #ffae00;
                 color: #eeeeee;
                 font-size: px2rem(28px);
-                box-shadow: 0px 0px 25px 4px #ff9c00
             }
         }
     }
@@ -631,7 +630,6 @@
             background: #ffae00;
             color: #eeeeee;
             font-size: px2rem(28px);
-            box-shadow: 0px 0px 20px 2px #ff9c00
         }
     }
 }
