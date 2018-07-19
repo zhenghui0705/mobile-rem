@@ -10,10 +10,6 @@ module.exports = {
         path: path.resolve(__dirname, './bulid'),
         filename: 'bundle.js'
     },
-    output: {
-        path: __dirname + '/dist/', //打包后的路径
-        filename: 'js/bundle.js'
-    },
     module: {
         //加载器配置
         loaders: [{

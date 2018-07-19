@@ -35,6 +35,10 @@
 
 .newsContent {
     margin: px2rem(25px) px2rem(32px) px2rem(0px) px2rem(32px);
+    overflow: hidden;
+    line-height: px2rem(58px);
+    color: #555555;
+    font-size: px2rem(32px);
     .newTitle {
         line-height: px2rem(72px);
         color: #333333;
@@ -90,11 +94,6 @@
 
 .newFore {
     margin-top: px2rem(76px);
-    .newText_1 {
-        line-height: px2rem(58px);
-        color: #555555;
-        font-size: px2rem(32px);
-    }
     ;
     .newsImgbox {
         margin-top: px2rem(53px);
@@ -349,7 +348,7 @@
 .reviewInfo {
     margin-left: px2rem(113px);
     margin-top: px2rem(15px);
-    p {
+    #res {
         color: #555555;
         font-size: px2rem(32px);
         line-height: px2rem(50px);
