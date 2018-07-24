@@ -24,17 +24,7 @@ module.exports = {
                 test: /\.(jpg|png|gif|svg)$/,
                 use: ['url-loader?limit=8192&name=./[name].[ext]']
             }, /*解析图片*/
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                //打包除这个文件之外的文件
-                exclude: path.resolve(__dirname, "./node_modules"),
-                //打包包括的文件
-                include: path.resolve(__dirname, "./*"),
-                options: {
-                    'presets': ['latest']
-                }
-            }
+        
         ],
     },
 
